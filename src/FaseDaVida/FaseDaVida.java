@@ -3,7 +3,7 @@ package FaseDaVida;
 import javax.swing.JOptionPane;
 
 public class FaseDaVida {
-	public static void definirFasedaVida() {
+	public static void main(String[] args) {
 		try {
 			int idade;
 			idade = Integer.parseInt(JOptionPane.showInputDialog("Digite uma idade para saber a fase da vida correspondente: "));
