@@ -1,8 +1,8 @@
-package CalculoSalario;
+package CalcularSalario;
 
 import javax.swing.JOptionPane;
 
-public class CalculoSalario {
+public class CalcularSalario {
 
 	public static void main(String[] args) {
 		try {

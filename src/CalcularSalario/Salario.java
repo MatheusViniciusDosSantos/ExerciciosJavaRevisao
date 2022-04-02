@@ -1,4 +1,4 @@
-package CalculoSalario;
+package CalcularSalario;
 
 public class Salario {
 	private Double quantidadeHoras;
@@ -62,11 +62,11 @@ public class Salario {
 	}
 	
 	public Double getValorTotalDesconto() {
-		return (getValorSindicato() + getValorImpostoRenda() + getValorFGTS() + getValorINSS());
+		return (getValorSindicato() + getValorImpostoRenda() + getValorINSS());
 	}
 	
 	public Double getSalarioLiquido() {
-		return getSalarioBruto() - getValorTotalDesconto() + getValorFGTS();
+		return getSalarioBruto() - getValorTotalDesconto();
 	}
 	
 	@Override
