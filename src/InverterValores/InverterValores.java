@@ -6,7 +6,18 @@ public class InverterValores {
 
 	public static void main(String[] args) {
 		String entrada = JOptionPane.showInputDialog("Digite números separados por vírgula para inverter sua ordem.");
-		String valores[] = entrada.split(",");
+		String valores[] = separarValores(entrada);
+		String resultado = inverterValores(valores);
+		
+		print(resultado);
+	}
+	
+	private static String[] separarValores(String entrada) {
+		
+		return entrada.split(",");
+	}
+	
+	private static String inverterValores(String[] valores) {
 		String resultado = new String();
 		for (int i = valores.length - 1; i >=0; i--) {
 			if (i == 0) {
@@ -15,7 +26,11 @@ public class InverterValores {
 				resultado = resultado + valores[i] + ",";
 			}
 		}
-		System.out.println(resultado);
+		return resultado;
+	}
+	
+	private static void print(Object valor) {
+		System.out.println(valor);
 	}
 
 }
