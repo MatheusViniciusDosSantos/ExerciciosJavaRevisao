@@ -3,9 +3,9 @@ package LojaVirtual;
 import java.util.List;
 import java.util.Scanner;
 
-import Models.Carrinho;
-import Models.CarrinhoItens;
-import Models.Produto;
+//import Models.Carrinho;
+//import Models.CarrinhoItens;
+//import Models.Produto;
 
 public class UsarLojaVirtual {
 //	private static int controlador;

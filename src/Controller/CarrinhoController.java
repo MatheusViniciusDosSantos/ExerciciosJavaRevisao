@@ -32,9 +32,12 @@ public class CarrinhoController {
 		//Mostrar cliente
 		String retorno = new String();
 		for (CarrinhoItens carrinhoItem : carrinhoItens) {
-			
+			retorno = retorno + ("Produto: " + carrinhoItem.getProduto().getDescricao() + ", quantidade: "
+					+ carrinhoItem.getQuantidade() + ", valor unitário: " + carrinhoItem.getValorUnitario()
+					+ ", valor total: " + carrinhoItem.getQuantidade() * carrinhoItem.getValorUnitario() 
+					+ ", cliente: " + carrinhoItem.getCarrinho().getCliente().getNome() + ".\r\n");
 		}
-		return "CarrinhoController [carrinhoItens=" + carrinhoItens + "]";
+		return "Lista de produtos: \r\n" + retorno;
 	}
 	
 	
