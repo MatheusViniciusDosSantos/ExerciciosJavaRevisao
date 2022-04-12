@@ -1,4 +1,4 @@
-package Models;
+package br.com.lojavirtual.model.entidade;
 
 import java.util.List;
 
@@ -39,6 +39,11 @@ public class Produto {
 
 	public void setValorVenda(Double valorVenda) {
 		this.valorVenda = valorVenda;
+	}
+
+	@Override
+	public String toString() {
+		return "O produto " + descricao + " tem estoque de " + estoque + " e seu  valor de venda é " + valorVenda;
 	}
 
 	

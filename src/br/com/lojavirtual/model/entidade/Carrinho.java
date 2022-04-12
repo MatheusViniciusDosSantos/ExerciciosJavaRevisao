@@ -1,4 +1,4 @@
-package Models;
+package br.com.lojavirtual.model.entidade;
 
 import java.util.Date;
 

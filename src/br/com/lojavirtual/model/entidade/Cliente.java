@@ -1,4 +1,4 @@
-package Models;
+package br.com.lojavirtual.model.entidade;
 
 public class Cliente {
 	private Integer id;

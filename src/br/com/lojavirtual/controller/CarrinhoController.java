@@ -1,11 +1,11 @@
-package Controller;
+package br.com.lojavirtual.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Models.Carrinho;
-import Models.CarrinhoItens;
-import Models.Produto;
+import br.com.lojavirtual.model.entidade.Carrinho;
+import br.com.lojavirtual.model.entidade.CarrinhoItens;
+import br.com.lojavirtual.model.entidade.Produto;
 
 public class CarrinhoController {
 	private List<CarrinhoItens> carrinhoItens = new ArrayList();
@@ -21,6 +21,10 @@ public class CarrinhoController {
 	
 	public void removerItem() {
 		
+	}
+	
+	public List<CarrinhoItens> retornaListaProdutosCarrinho() {
+		return carrinhoItens;
 	}
 
 	@Override
