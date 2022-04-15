@@ -1,15 +1,13 @@
 package br.com.lojavirtual.model.dados;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import br.com.lojavirtual.model.entidade.Cliente;
 
 public class ClienteDados {
-
-	public static List<Cliente> retornaListaClientes() {
-		List<Cliente> listaClientes = new ArrayList();
-		
+	private static List<Cliente> listaClientes;
+	
+	public ClienteDados() {
 		Cliente jose = new Cliente();
 		jose.setCpf("02345178564");
 		jose.setNome("José");
@@ -35,7 +33,13 @@ public class ClienteDados {
 		listaClientes.add(clementina);
 		listaClientes.add(maria);
 		listaClientes.add(bernardo);
-		
+	}
+
+	public static List<Cliente> retornaListaClientes() {		
 		return listaClientes;
+	}
+	
+	public static void adicionarCliente(Cliente cliente) {
+		listaClientes.add(cliente);
 	}
 }

@@ -2,13 +2,25 @@ package br.com.lojavirtual.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
+import br.com.lojavirtual.model.dados.CarrinhoDados;
+import br.com.lojavirtual.model.dados.ClienteDados;
 import br.com.lojavirtual.model.entidade.Carrinho;
 import br.com.lojavirtual.model.entidade.CarrinhoItens;
+import br.com.lojavirtual.model.entidade.Cliente;
 import br.com.lojavirtual.model.entidade.Produto;
+import br.com.lojavirtual.view.SelecionarCliente;
 
 public class CarrinhoController {
-	private List<CarrinhoItens> carrinhoItens = new ArrayList();
+	private List<CarrinhoItens> carrinhoItens;
+	
+	public static void inserirCarrinho() {
+		Carrinho carrinho = new Carrinho();
+		System.out.println("Sera mostrada uma lista de clientes para ser adicionado um cliente ao carrinho\r\n");
+		carrinho.setCliente(SelecionarCliente.retornaCliente());
+		CarrinhoDados.adicionarCarrinho(carrinho);
+	}
 	
 	public void adicionarItem(Carrinho carrinho, Produto produto, Double valorUnitario, Double quantidade) {
 		CarrinhoItens carrinhoItem = new CarrinhoItens();

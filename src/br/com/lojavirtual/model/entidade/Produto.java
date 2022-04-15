@@ -1,13 +1,25 @@
 package br.com.lojavirtual.model.entidade;
 
-import java.util.List;
-
 public class Produto {
 	private Integer id;
+	private Integer idAtual;
 	private String descricao;
 	private Double estoque;
 	private Double valorVenda;
 	
+	public Produto() {
+		gerarId();
+	}
+	
+	private void gerarId() {
+		
+		if (idAtual == 0 || idAtual == null) {
+			idAtual = 1;
+		} else {
+			idAtual += 1;
+		}
+		setId(idAtual);
+	}	
 	
 	public Integer getId() {
 		return id;
